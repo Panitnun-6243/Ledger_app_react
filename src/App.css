@@ -90,12 +90,14 @@ body{
     display:flex;
     justify-content:space-between;
     align-items: center;
+    height: 45px;
 }
 .amount-item{
     margin: 10px;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    height: 45px;
 }
 .button-item{
     display:flex;
@@ -114,7 +116,8 @@ input[type=text] {
   }
   
   input[type=text]:focus {
-    background-color: lightblue;
+    
+    border-bottom:solid 3px rgb(116, 219, 219) ;
   }
   input[type=text]::placeholder{
       opacity: 0.5;
@@ -125,7 +128,7 @@ button{
     border: none;
     padding: 10px 18px;
     color:azure;
-    font-size: 17px;
+    font-size: 12px;
     
 }
 button {

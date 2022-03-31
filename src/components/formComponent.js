@@ -44,7 +44,7 @@ const FormComponent = (props) => {
           />
         </div>
         <div className="button-item">
-          <button type="submit">&#128176; Add to your list</button>
+          <button type="submit">Add</button>
         </div>
       </form>
     </div>
