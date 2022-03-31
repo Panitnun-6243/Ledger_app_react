@@ -36,6 +36,12 @@ body{
     font-weight: lighter;
     font-size: 40px;
 }
+.expense{
+    border-left: solid 5px #CCA8E9;
+}
+.income{
+    border-left: solid 5px rgb(116, 219, 219);
+}
 .item{
     text-align:center;
         list-style-type: none;
