@@ -5,7 +5,6 @@ import FormComponent from "./components/formComponent";
 import { useState } from "react";
 
 function App() {
-  
   const [items, setItems] = useState([]);
   const onAddNewItem = (newItem) => {
     setItems((prevItem) => [newItem, ...prevItem]);
