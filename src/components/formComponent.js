@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const FormComponent = (props) => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState();
+  const [formValid, setFormValid] = useState(false);
+
+  useEffect(() => {
+    const checkValid =
+      title.trim().length > 0 && amount !== 0 && Number(amount);
+    setFormValid(checkValid);
+  }, [title, amount]);
 
   const inputTitle = (event) => {
     setTitle(event.target.value);
@@ -18,9 +25,9 @@ const FormComponent = (props) => {
       title: title,
       amount: Number(amount),
     };
-    props.onAddItem(itemData) //ไม่ใช่ค่าที่รับมาเเต่เป็นค่าที่ส่งขึ้นไปเรียกใช้ฟังชั่นใน app component อีกที
+    props.onAddItem(itemData); //ไม่ใช่ค่าที่รับมาเเต่เป็นค่าที่ส่งขึ้นไปเรียกใช้ฟังชั่นใน app component อีกที
     setTitle(""); //เคลียค่าในstateเพราะsubmitออกมาใช้เเล้ว
-    setAmount(0);
+    setAmount("");
   };
   return (
     <div className="form-container">
@@ -32,6 +39,7 @@ const FormComponent = (props) => {
             placeholder="Your income or expense"
             onChange={inputTitle}
             value={title}
+            required
           />
         </div>
         <div className="amount-item">
@@ -41,10 +49,13 @@ const FormComponent = (props) => {
             placeholder="Costs"
             onChange={inputAmount}
             value={amount}
+            required
           />
         </div>
         <div className="button-item">
-          <button type="submit">Add</button>
+          <button type="submit" disabled={!formValid}>
+            Add
+          </button>
         </div>
       </form>
     </div>
