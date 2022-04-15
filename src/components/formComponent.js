@@ -46,7 +46,7 @@ const FormComponent = (props) => {
           <label>Amount :</label>
           <input
             type="text"
-            placeholder="Costs"
+            placeholder="Costs (e.g., +/-1000)"
             onChange={inputAmount}
             value={amount}
             required

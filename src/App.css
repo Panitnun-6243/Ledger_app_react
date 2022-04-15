@@ -127,3 +127,30 @@ button:hover {
   color: rgb(116, 219, 219);
   cursor: pointer;
 }
+
+/* balance */
+.balance-container{
+  margin-top: 18px;
+  padding: 10px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 15px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  justify-content:space-evenly;
+  font-size: 13px;
+  height: 60px;
+  align-items: center;
+  flex-direction: row;
+}
+.balance-total{
+  color: black;
+}
+.balance-income{
+  color: #cca8e9;
+}
+.balance-expense{
+  color: #cca8e9;
+}
