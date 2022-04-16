@@ -7,11 +7,13 @@ const Item = (props) => {
   return (
     // ค่าตัวเลขติดลบจะเข้าเอาเครื่องหมายลบเข้ามาด้วย ดังนั้นต้องเคลียค่าโดยใช้ absolute
     <li className={status}>
-      {title}{" "}
-      <span>
-        {symbol}
-        {Math.abs(amount)}
-      </span>
+      <div className="item-title">{title} </div>
+      <div className="item-amount">
+        <span>
+          {symbol}
+          {Math.abs(amount)}
+        </span>
+      </div>
     </li>
   );
 };
