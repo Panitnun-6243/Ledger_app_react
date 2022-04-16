@@ -183,5 +183,8 @@ button:hover {
   width: 340px;
   justify-content: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+}
+.bath {
+  color: burlywood;
 }

@@ -18,9 +18,9 @@ function App() {
     const amounts = items.map((items) => items.amount);
     const income = amounts.filter((e) => e > 0);
     const expense = amounts.filter((e) => e < 0);
-    const totalIncome = income.reduce((a, b) => a + b, 0);
-    const totalExpense = expense.reduce((a, b) => a - b, 0);
-    const balance = totalIncome - totalExpense;
+    const totalIncome = income.reduce((a, b) => a + b, 0).toFixed(2);
+    const totalExpense = expense.reduce((a, b) => a - b, 0).toFixed(2);
+    const balance = (totalIncome - totalExpense).toFixed(2);
 
     setReportIncome(totalIncome);
     setReportExpense(totalExpense);
